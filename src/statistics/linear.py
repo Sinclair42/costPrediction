@@ -22,6 +22,9 @@ class Coefficient:
         """
         return f'Coefficient({self.W}, {self.b})'
 
+    def predict(self, x):
+        return self.W * x + self.b
+
 
 class LinearRegression:
     """

@@ -46,3 +46,8 @@ print(f'학습 후 가중치, 편향: {busan_result}')
 print(f'초기 RSS: {busan_linear.rss(busan_coefficient)}')
 print(f'학습 후 RSS: {busan_linear.rss(busan_result)}')
 busan_linear.draw_line(busan_result)
+
+# 2027년 3월의 월세 예측
+delta_month = 12 * 7 - 4
+for result in [seoul_result, gyeongy_result, busan_result]:
+    print(result.predict(delta_month))
